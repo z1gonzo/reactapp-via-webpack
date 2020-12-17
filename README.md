@@ -6,14 +6,14 @@ Add Webpack with:
 Basic configuration in `root` directory with file `webpack.config.js`
 
 ```javascript
-    const path = require('path');
-    module.exports = {
+const path = require('path');
+module.exports = {
     entry: './src/index.js',
     output: {
-     path: path.join(__dirname, '/dist'),
-     filename: 'bundle.min.js'
-  }
-}
+        path: path.join(__dirname, '/dist'),
+        filename: 'bundle.min.js'
+        }
+    }
 ```
 
 Add React:
@@ -38,12 +38,11 @@ We need to add to our `webpack.config.js`
 ```javascript
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
-  plugins: [
+plugins: [
     new HtmlWebpackPlugin({
-      template: './src/index.html'
+    template: './src/index.html'
     })
   ]
-
 ```
 
 If we want to develop our project we can use `webpack-dev-server` with live reloading.
